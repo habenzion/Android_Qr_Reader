@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rvcard"
+        android:background="#071B3C"
+        >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/qrview"
+    android:background="#071B3C"
+    >
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+            <com.budiyev.android.codescanner.CodeScannerView
+                android:id="@+id/scanner_view"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                app:frameVisible="true"
+                app:frameColor="@color/white"
+                app:frameThickness="5dp"
+                app:flashButtonOffIcon="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                app:autoFocusButtonColor="@color/white"
+                app:autoFocusButtonVisible="true"
+                app:flashButtonColor="@color/white"
+                app:flashButtonVisible="true"
+                app:maskColor="#071B3C" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <TextView
+                android:id="@+id/scannedTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shimmer_view_container"
+                android:layout_gravity="bottom|center"
+              android:layout_centerHorizontal="true"
+                android:text="SUCCESS"
+                android:layout_margin="5dp"
+                android:textColor="@color/success"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+</RelativeLayout>
+        <LinearLayout
+            android:id="@+id/line2"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+             >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="እንደገና"
+                android:id="@+id/againbtn"
+                android:textSize="20sp"
+                android:fontFamily="@font/geezable"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Post"
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="right"
+                />
+
+        </LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="7dp"
+            android:id="@+id/resultcv"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            android:layout_below="@+id/line2"
+            >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/lv"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/tower_one"
+            android:layout_margin="10dp"
+            android:id="@+id/img"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:layout_width="145dp"
+            android:layout_height="100dp"
+            android:text="       ኮርፖሬሽን ኤሌክትሪክሲቲ   ኤርትራ"
+            android:layout_below="@+id/lv"
+            android:fontFamily="@font/geezable"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="16sp"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/tower_one"
+            android:layout_margin="10dp"
+            android:id="@+id/img2"
+            android:contentDescription="@string/app_name" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#0AD595"
+        android:id="@+id/line"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_below="@+id/lv"
+   />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ናይ ዓሚል ሓበሬታ"
+        android:fontFamily="@font/geezable"
+        android:layout_below="@+id/lv"
+        android:id="@+id/header"
+       android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:id="@+id/namell"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignLeft="@+id/nametv"
+            android:src="@drawable/user"
+            android:layout_margin="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nametv"
+            android:text="dshf"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/geezable"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="3dp"
+
+            />
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+  android:id="@+id/contractll"
+    android:layout_below="@+id/namell"
+    >
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/nametv"
+        android:src="@drawable/bill"
+        android:layout_margin="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/contracttv"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/geezable"
+        android:text="data2"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/nametv"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+
+        />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/meterll"
+        android:layout_below="@+id/contractll"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignLeft="@+id/nametv"
+            android:src="@drawable/meter_color"
+            android:layout_margin="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/metertv"
+            android:text="ghgjg"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/geezable"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/contracttv"
+            android:textSize="20sp"
+
+            />
+    </LinearLayout>
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Post"
+    android:textSize="20sp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+
+    />
+
+</RelativeLayout>
+        </ScrollView>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+  
+
+</FrameLayout>
